@@ -73,7 +73,7 @@ Agentic ranking weights capability ceiling, reliability floor, core tool-calling
 | Qwen 3.6 35B Q8_K_XL | `qwen36-35b_q8_xl_summary.md` |
 | Qwen 3.6 27B NVFP4 | `qwen3.6.27b-nvfp4_summary.md` |
 | Qwopus 3.6 27B | `Qwopus-3.6-27b_summary.md` |
-| DeepSeek V4 Flash Q2 | `DeepSeek-V4-Flash-DSpark.html` |
+| DeepSeek V4 Flash Q2 | `DeepSeek-V4-Flash-q2-summery.md` |
 | Agents-A1 | `agents-a1_summary.md` |
 | Gemma 4 26B NVFP4 | `gemma-4-26b-nvfp4_summary.md` |
 | Nemotron 3 Nano Omni 30B | `Nemotron-3-Nano-Omni-30B-A3B_summary.md` |
