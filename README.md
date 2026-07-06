@@ -1,4 +1,4 @@
-# Best Local Model for Agentic Workflows (2026)
+# Best Local Model for Agentic Workflows for single DGX Spark (2026)
 
 Interactive comparison report for choosing a **local LLM backend** for agentic workflows — multi-turn tool orchestration, function calling, and autonomous planning as exercised by frameworks like [Hermes Agent](https://github.com/NousResearch/Hermes-Function-Calling).
 
