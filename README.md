@@ -51,16 +51,18 @@ open agentic-model-comparison.html         # macOS
 | 1 | **Qwen 3.6 35B A3B UD Q8_K_XL** | 91.0 | Best overall: score, capability, deployability, zero never-pass |
 | 2 | Qwen 3.6 27B NVFP4 | 89.0 | Hard-mode / safety tier (93% hard, 96% safety, 81% Pass^8) |
 | 3 | Qwopus 3.6 27B Coder MTP | 85.2 | Fastest reliable tier (2.2s, 4.8pp gap, 100% error recovery) |
-| 4 | DeepSeek V4 Flash Q2 | 86.5 | High ceiling (88.1% Pass@8) but TC-60 injection + 23 safety warnings |
-| 5 | Agents-A1 Q8_0 | 83.4 | High Pass@8 ceiling (90.5%), flaky floor (64.3%) |
-| 6 | Gemma 4 26B NVFP4 | 81.4 | Mid-tier |
-| 7 | Nemotron 3 Nano Omni 30B | 79.0 | 48.8% Pass^8 — not for production agents |
+| 4 | Qwen 3.5 122B A10B | 88.6 | High score + 77.4% reliability floor (beats #1), but TC-60 sleeper injection 1/8, 73% hard mode |
+| 5 | DeepSeek V4 Flash Q2 | 86.5 | High ceiling (88.1% Pass@8) but TC-60 injection + 23 safety warnings |
+| 6 | Agents-A1 Q8_0 | 83.4 | High Pass@8 ceiling (90.5%), flaky floor (64.3%) |
+| 7 | Gemma 4 26B NVFP4 | 81.4 | Mid-tier |
+| 8 | Nemotron 3 Nano Omni 30B | 79.0 | 48.8% Pass^8 — not for production agents |
 
 ## Tier recommendations
 
 - **Default production agent** → Qwen 35B Q8_K_XL
 - **Safety-critical / adversarial workloads** → Qwen 27B NVFP4
 - **Lowest latency + tightest reliability gap** → Qwopus 27B (2.2s, 4.8pp)
+- **High score, needs a hardened safety prompt** → Qwen 3.5 122B A10B (88.6, 77.4% floor, but TC-60 sleeper injection 1/8 — verify safety context before unattended email/external-data use)
 - **Do not deploy unattended** → DeepSeek V4 Flash Q2 (TC-60 sleeper injection 0/8), Nemotron 3 Nano (48.8% Pass^8)
 
 ## Methodology
@@ -86,6 +88,7 @@ Agentic ranking weights capability ceiling, reliability floor, core tool-calling
 | Agents-A1 | `agents-a1_summary.md` |
 | Gemma 4 26B NVFP4 | `gemma-4-26b-nvfp4_summary.md` |
 | Nemotron 3 Nano Omni 30B | `Nemotron-3-Nano-Omni-30B-A3B_summary.md` |
+| Qwen 3.5 122B A10B | (this PR — bishop-config 8-trial run on tool-eval-bench v2.0.7, LiteLLM · AGX101) |
 
 Raw summaries live in the [tool-eval-bench results](https://github.com/MiaAI-Lab/tool-eval-bench) directory. This repo publishes only the curated HTML comparison reports.
 
