@@ -91,4 +91,4 @@ Raw summaries live in the [tool-eval-bench results](https://github.com/MiaAI-Lab
 
 ## License
 
-Reports and README: MIT. Benchmark data © respective model evaluators. tool-eval-bench is part of the MiaAI Lab project.
+Reports and README: MIT. Benchmark data © respective model evaluators. [tool-eval-bench](https://github.com/SeraphimSerapis/tool-eval-bench) is © 2026 SeraphimSerapis (MIT). MiaAI Lab ran the suite and published these comparisons; [MiaAI-Lab/tool-eval-bench](https://github.com/MiaAI-Lab/tool-eval-bench) is a fork of that project, not the original.
